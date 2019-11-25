@@ -15,7 +15,7 @@ now_time = now.strftime("%H:%M:%S")
 
 
 host = input("Enter Host: ")
-port = input("Enter Port: ")
+port = int(input("Enter Port: "))
 print(f"{green}Chat room created! at {now_time}")
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((host, port))
