@@ -16,7 +16,7 @@ print(f"{green}Chat room created! at {now_time}")
 
 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((127.0.0.1, 1024))
+s.bind(("127.0.0.1", 1024))
 s.listen(5)
 while True:
 
