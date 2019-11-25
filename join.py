@@ -15,9 +15,9 @@ now_time = now.strftime("%H:%M:%S")
 print(green)
 print(now_time)
 
-
+host = input("Enter Host: ")
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(("127.0.0.1", 1024))
+s.connect((host, 1024))
 print(f"{green}connected to server {socket.gethostname()}")
 print(f"server {socket.gethostname()} is online")
 
