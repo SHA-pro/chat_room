@@ -11,10 +11,11 @@ print("This program was made by Swam Htet Aung")
 
 now = datetime.now()
 now_time = now.strftime("%H:%M:%S")
-print(f"{green}Chat room created! at {now_time}")
+
 
 
 host = input("Enter Host: ")
+print(f"{green}Chat room created! at {now_time}")
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((host, 1024))
 s.listen(5)
