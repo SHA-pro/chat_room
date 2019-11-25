@@ -18,7 +18,7 @@ print(now_time)
 host = input("Enter Host: ")
 port = input("Enter Port: ")
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((host, 1024))
+s.connect((host, port))
 print(f"{green}connected to server {socket.gethostname()}")
 print(f"server {socket.gethostname()} is online")
 
