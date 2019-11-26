@@ -19,16 +19,19 @@ host = input("Enter Host: ")
 port = int(input("Enter Port: "))
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
-print(f"{green}connected to server {socket.gethostname()}")
+
 print(f"server {socket.gethostname()} is online")
 
 c_user = input("Enter User Name: ")
 while True:
-    msg = s.recv(1024)
-    print(msg.decode("utf-8"))
+    print(f"{green}connected to server {socket.gethostname()}")
+    
+    
 
 
     while 1 > 0:
+        msg = s.recv(1024)
+        print(msg.decode("utf-8"))
         message = input(f"{blue}{c_user} : ")
         message.encode("utf-8")
         c_user.encode("utf-8")
